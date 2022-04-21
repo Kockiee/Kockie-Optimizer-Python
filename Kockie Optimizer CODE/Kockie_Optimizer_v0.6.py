@@ -259,7 +259,7 @@ def btn2Action():
                         "[PerformanceMode]\n"
                         "MeshQuality=0\n")
                 tk.messagebox.showinfo('Operação Concluída', 'Sua Configuração foi criada com sucesso !\n :)')
-            if varchk.get() == 1:
+            elif varchk.get() == 1:
                 with open(fr'C:\Users\{user}\AppData\Local\FortniteGame\Saved\Config\WindowsClient\GameUserSettings.ini', 'w+') as file:
                     file.write(
                         "[/Script/FortniteGame.FortGameUserSettings]\n"
@@ -514,7 +514,7 @@ def btn2Action():
                         "-shadowQuality (0)\n"
                         )
                 tk.messagebox.showinfo('Operação Concluída', 'Sua Configuração foi criada com sucesso !\n :)')
-            if varchk.get() == 3:
+            elif varchk.get() == 3:
                 tk.messagebox.showinfo('Importante', 'Selecione o diretório onde seu gta v está instalado (pasta raiz)!\n :)')
                 directory = str(dlg.askdirectory(title='Selecione a configuração'))
                 with open(fr'{directory}\Commandline.txt', 'w+') as file:
@@ -1124,7 +1124,7 @@ def btn2Action():
                             'setcl -8293123 "1"\n'
                         )
                 tk.messagebox.showinfo('Operação Concluída', 'Sua Configuração foi criada com sucesso !\n :)')
-            if varchk.get() == 5:
+            elif varchk.get() == 5:
                 if os.path.isdir(f"C:/Users/{user}/Documents/Call of Duty Modern Warfare/players"):
                     tk.messagebox.showinfo('Importante', 'Não abra o jogo em modo de segurança nem dê permissão para o jogo modificar suas configurações gráficas !\n :)')
                     with open(fr'C:\Users\{user}\Documents\Call of Duty Modern Warfare\players\config.cfg', 'w+') as file:
@@ -1770,7 +1770,7 @@ def btn2Action():
                         'LastOpened=ShooterGame\n'
                     )
                 tk.messagebox.showinfo('Operação Concluída', 'Sua Configuração foi substituída com sucesso !\n :)')
-            if varchk.get() == 7:
+            elif varchk.get() == 7:
                 tk.messagebox.showinfo('Importante', 'Selecione no diretório já aberto, onde se encontra o arquivo de configuração do jogo (Normalmente se encontra na pasta "Windows" que está dentro de uma pasta cujo nome é aleatório)!\n :)')
                 directory = str(dlg.askdirectory(title='Selecione a configuração', initialdir=(f'C:/Users/{user}/AppData/Local/VALORANT/Saved/Config')))
                 with open(fr'{directory}\RiotUserSettings.ini', 'w+') as file:
@@ -1892,7 +1892,7 @@ def btn2Action():
                         'mat_setvideomode 800 600 0'
                     )
                 tk.messagebox.showinfo('Operação Concluída', 'Sua Configuração foi criada com sucesso !\n :)')
-            if varchk.get() == 9:
+            elif varchk.get() == 9:
                 with open(fr'C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\csgo\cfg\boost.cfg', 'w+') as file:
                     file.write(
                         'fps_max 0\n'
