@@ -2109,7 +2109,7 @@ app.geometry("627x389+700+300")
 app.resizable(False, False)
 
 #Título da janela
-app.title("KOCKIE OPTIMIZER V0.4")
+app.title("KOCKIE OPTIMIZER V0.6")
 
 #Ícone do programa
 app.iconbitmap("files\icon.ico")
