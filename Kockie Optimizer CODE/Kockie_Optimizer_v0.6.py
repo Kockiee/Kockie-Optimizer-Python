@@ -39,7 +39,7 @@ def btn5Action():
     webbrowser.open('https://www.youtube.com/channel/UCYLoDNZ_JOE_W1LFkSTLWpQ')
 
 def btn6Action():
-    webbrowser.open('https://discord.gg/ZMPKWyvDGH')
+    webbrowser.open('https://discord.gg/g6NkdMSVFA')
 
 def btn2Action():
     varchk = IntVar()
