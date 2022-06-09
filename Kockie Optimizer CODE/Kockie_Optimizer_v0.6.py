@@ -8,6 +8,12 @@ import webbrowser
 import tkinter as tk
 import emoji
 import os
+import ctypes
+
+if not ctypes.windll.shell32.IsUserAnAdmin():
+    import sys
+    ctypes.windll.shell32.ShellExecuteW(
+        None, 'runas', sys.executable, ' '.join(sys.argv), None, None)
 
 varWin = []
 user = str(os.getlogin())
