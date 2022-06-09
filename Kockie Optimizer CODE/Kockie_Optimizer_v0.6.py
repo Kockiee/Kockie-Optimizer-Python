@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import messagebox
 from tkinter import filedialog as dlg
 from tkinter import ttk
 from ttkthemes import ThemedTk
@@ -12,6 +11,19 @@ import os
 
 varWin = []
 user = str(os.getlogin())
+
+def center(win):
+    win.update_idletasks()
+    width = win.winfo_width()
+    frm_width = win.winfo_rootx() - win.winfo_x()
+    win_width = width + 2 * frm_width
+    height = win.winfo_height()
+    titlebar_height = win.winfo_rooty() - win.winfo_y()
+    win_height = height + titlebar_height + frm_width
+    x = win.winfo_screenwidth() // 2 - win_width // 2
+    y = win.winfo_screenheight() // 2 - win_height // 2
+    win.geometry('{}x{}+{}+{}'.format(width, height, x, y))
+    win.deiconify()
 
 def btn1Action():
     try:
@@ -1940,7 +1952,10 @@ def btn2Action():
     #Propriedades da janela
     NewWindow.title("Configurações")
     NewWindow.iconbitmap("files\icon.ico", )
-    NewWindow.geometry("900x677+700+300")
+    NewWindow.geometry("900x677")
+    center(NewWindow)
+
+    
     NewWindow.resizable(False, False)
 
     frame = ttk.Frame(NewWindow)
@@ -2046,7 +2061,7 @@ def btn2Action():
     chk9.place(x=210, y=220)
     chk10.place(x=211, y=250)
     btnCSGO.place(x=165, y=285)
-       
+    
     def btnSeta1Action():
         global varWin
         if varWin == 1:
@@ -2105,8 +2120,9 @@ def btn2Action():
 app = ThemedTk(theme="breeze")
 
 #Tamanho da janela
-app.geometry("627x389+700+300")
+app.geometry("627x389")
 app.resizable(False, False)
+center(app)
 
 #Título da janela
 app.title("KOCKIE OPTIMIZER V0.6")
