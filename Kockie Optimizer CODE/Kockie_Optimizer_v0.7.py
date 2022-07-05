@@ -1,4 +1,3 @@
-import shutil
 from tkinter import *
 from tkinter import filedialog as dlg
 from tkinter import ttk
@@ -1955,157 +1954,6 @@ def btn2Action():
         except:
             tk.messagebox.showerror('Erro', 'Não foi possível modificar sua configuração, o jogo ou a configuração não foi encontrado(a) no sistema !\n :(')
 
-    def btnRobloxAction():
-        try:
-            directory = str(dlg.askdirectory(title='Selecione a pasta de nome aleatório no diretório já aberto:', initialdir=(f'C:\\Users\\{user}\\AppData\\Local\\Roblox\\Versions')))
-            origin = str(f'{directory}/PlatformContent/pc/textures')
-            destiny = str(f'{origin}/backup')
-            def createbackup():
-                shutil.copytree(origin, destiny)
-            if os.path.exists(destiny):
-                shutil.rmtree(destiny)
-                createbackup()
-            else:
-                createbackup()
-            if varchk.get() == 10:
-                with open(fr'C:\Users\{user}\AppData\Local\Roblox\GlobalBasicSettings_13.xml', 'w+') as file:
-                    file.write(
-                                '<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">\n'
-                                '	<External>null</External>\n'
-                                '	<External>nil</External>\n'
-                                '	<Item class="UserGameSettings" referent="RBX384B89760FC34E71AB9314917E2552FA">\n'
-                                '		<Properties>\n'
-                                '			<bool name="AllTutorialsDisabled">false</bool>\n'
-                                '			<BinaryString name="AttributesSerialize"></BinaryString>\n'
-                                '			<token name="CameraMode">0</token>\n'
-                                '			<bool name="CameraYInverted">false</bool>\n'
-                                '			<bool name="ChatVisible">true</bool>\n'
-                                '			<string name="CompletedTutorials"></string>\n'
-                                '			<bool name="ComputerCameraMovementChanged">false</bool>\n'
-                                '			<token name="ComputerCameraMovementMode">0</token>\n'
-                                '			<bool name="ComputerMovementChanged">true</bool>\n'
-                                '			<token name="ComputerMovementMode">0</token>\n'
-                                '			<token name="ControlMode">0</token>\n'
-                                '			<string name="DefaultCameraID"></string>\n'
-                                '			<bool name="Fullscreen">false</bool>\n'
-                                '			<float name="GamepadCameraSensitivity">1</float>\n'
-                                '			<int name="GraphicsQualityLevel"></int>\n'
-                                '			<bool name="HasEverUsedVR">false</bool>\n'
-                                '			<float name="MasterVolume">1</float>\n'
-                                '			<bool name="MicroProfilerWebServerEnabled">false</bool>\n'
-                                '			<float name="MouseSensitivity">1</float>\n'
-                                '			<Vector2 name="MouseSensitivityFirstPerson">\n'
-                                '				<X>1</X>\n'
-                                '				<Y>1</Y>\n'
-                                '			</Vector2>\n'
-                                '			<Vector2 name="MouseSensitivityThirdPerson">\n'
-                                '				<X>1</X>\n'
-                                '				<Y>1</Y>\n'
-                                '			</Vector2>\n'
-                                '			<string name="Name">GameSettings</string>\n'
-                                '			<bool name="OnScreenProfilerEnabled">false</bool>\n'
-                                '			<bool name="PerformanceStatsVisible">false</bool>\n'
-                                '			<int name="RCCProfilerRecordFrameRate">1</int>\n'
-                                '			<int name="RCCProfilerRecordTimeFrame">1</int>\n'
-                                '			<token name="SavedQualityLevel">1</token>\n'
-                                '			<int64 name="SourceAssetId">-1</int64>\n'
-                                '			<bool name="StartMaximized">false</bool>\n'
-                                '			<Vector2 name="StartScreenPosition">\n'
-                                '				<X>0</X>\n'
-                                '				<Y>0</Y>\n'
-                                '			</Vector2>\n'
-                                '			<Vector2 name="StartScreenSize">\n'
-                                '				<X>800</X>\n'
-                                '				<Y>600</Y>\n'
-                                '			</Vector2>\n'
-                                '			<BinaryString name="Tags"></BinaryString>\n'
-                                '			<bool name="TouchCameraMovementChanged">false</bool>\n'
-                                '			<token name="TouchCameraMovementMode">0</token>\n'
-                                '			<bool name="TouchMovementChanged">false</bool>\n'
-                                '			<token name="TouchMovementMode">0</token>\n'
-                                '			<bool name="UsedCoreGuiIsVisibleToggle">false</bool>\n'
-                                '			<bool name="UsedCustomGuiIsVisibleToggle">false</bool>\n'
-                                '			<bool name="UsedHideHudShortcut">false</bool>\n'
-                                '			<bool name="VREnabled">true</bool>\n'
-                                '			<int name="VRRotationIntensity">1</int>\n'
-                                '			<bool name="VignetteEnabled">true</bool>\n'
-                                '			<string name="gaID"></string>\n'
-                                '		</Properties>\n'
-                                '	</Item>\n'
-                                '</roblox>'
-                    )
-                tk.messagebox.showinfo('Operação Concluída', 'Sua Configuração foi modificada com sucesso !\n :)')
-            if varchk.get() == 11:
-                with open(fr'C:\Users\{user}\AppData\Local\Roblox\GlobalBasicSettings_13.xml', 'w+') as file:
-                    file.write(
-                                '<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">\n'
-                                '	<External>null</External>\n'
-                                '	<External>nil</External>\n'
-                                '	<Item class="UserGameSettings" referent="RBX384B89760FC34E71AB9314917E2552FA">\n'
-                                '		<Properties>\n'
-                                '			<bool name="AllTutorialsDisabled">false</bool>\n'
-                                '			<BinaryString name="AttributesSerialize"></BinaryString>\n'
-                                '			<token name="CameraMode">0</token>\n'
-                                '			<bool name="CameraYInverted">false</bool>\n'
-                                '			<bool name="ChatVisible">true</bool>\n'
-                                '			<string name="CompletedTutorials"></string>\n'
-                                '			<bool name="ComputerCameraMovementChanged">false</bool>\n'
-                                '			<token name="ComputerCameraMovementMode">0</token>\n'
-                                '			<bool name="ComputerMovementChanged">true</bool>\n'
-                                '			<token name="ComputerMovementMode">0</token>\n'
-                                '			<token name="ControlMode">0</token>\n'
-                                '			<string name="DefaultCameraID"></string>\n'
-                                '			<bool name="Fullscreen">false</bool>\n'
-                                '			<float name="GamepadCameraSensitivity">1</float>\n'
-                                '			<int name="GraphicsQualityLevel"></int>\n'
-                                '			<bool name="HasEverUsedVR">false</bool>\n'
-                                '			<float name="MasterVolume">1</float>\n'
-                                '			<bool name="MicroProfilerWebServerEnabled">false</bool>\n'
-                                '			<float name="MouseSensitivity">1</float>\n'
-                                '			<Vector2 name="MouseSensitivityFirstPerson">\n'
-                                '				<X>1</X>\n'
-                                '				<Y>1</Y>\n'
-                                '			</Vector2>\n'
-                                '			<Vector2 name="MouseSensitivityThirdPerson">\n'
-                                '				<X>1</X>\n'
-                                '				<Y>1</Y>\n'
-                                '			</Vector2>\n'
-                                '			<string name="Name">GameSettings</string>\n'
-                                '			<bool name="OnScreenProfilerEnabled">false</bool>\n'
-                                '			<bool name="PerformanceStatsVisible">false</bool>\n'
-                                '			<int name="RCCProfilerRecordFrameRate">1</int>\n'
-                                '			<int name="RCCProfilerRecordTimeFrame">1</int>\n'
-                                '			<token name="SavedQualityLevel">3</token>\n'
-                                '			<int64 name="SourceAssetId">-1</int64>\n'
-                                '			<bool name="StartMaximized">false</bool>\n'
-                                '			<Vector2 name="StartScreenPosition">\n'
-                                '				<X>0</X>\n'
-                                '				<Y>0</Y>\n'
-                                '			</Vector2>\n'
-                                '			<Vector2 name="StartScreenSize">\n'
-                                '				<X>800</X>\n'
-                                '				<Y>600</Y>\n'
-                                '			</Vector2>\n'
-                                '			<BinaryString name="Tags"></BinaryString>\n'
-                                '			<bool name="TouchCameraMovementChanged">false</bool>\n'
-                                '			<token name="TouchCameraMovementMode">0</token>\n'
-                                '			<bool name="TouchMovementChanged">false</bool>\n'
-                                '			<token name="TouchMovementMode">0</token>\n'
-                                '			<bool name="UsedCoreGuiIsVisibleToggle">false</bool>\n'
-                                '			<bool name="UsedCustomGuiIsVisibleToggle">false</bool>\n'
-                                '			<bool name="UsedHideHudShortcut">false</bool>\n'
-                                '			<bool name="VREnabled">true</bool>\n'
-                                '			<int name="VRRotationIntensity">1</int>\n'
-                                '			<bool name="VignetteEnabled">true</bool>\n'
-                                '			<string name="gaID"></string>\n'
-                                '		</Properties>\n'
-                                '	</Item>\n'
-                                '</roblox>'
-                    )
-                tk.messagebox.showinfo('Operação Concluída', 'Sua Configuração foi modificada com sucesso !\n :)')
-        except:
-            tk.messagebox.showerror('Erro', 'Não foi possível completar a ação !\n :(')
-
     NewWindow = Toplevel()
 
     #Propriedades da janela
@@ -2227,8 +2075,7 @@ def btn2Action():
 
     btnRoblox = ttk.Button(frame1,
     text=(emoji.emojize(":engrenagem:Modificar Configuração", language="pt")),
-    width=22,
-    command=btnRobloxAction)
+    width=22)
 
     chk9.place(x=210, y=220)
     chk10.place(x=211, y=250)
