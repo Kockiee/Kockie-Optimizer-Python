@@ -13,8 +13,7 @@ import ctypes
 
 if not ctypes.windll.shell32.IsUserAnAdmin():
     import sys
-    ctypes.windll.shell32.ShellExecuteW(
-        None, 'runas', sys.executable, ' '.join(sys.argv), None, None)
+    ctypes.windll.shell32.ShellExecuteW(None, 'runas', sys.executable, ' '.join(sys.argv), None, None)
 
 varWin = []
 user = str(os.getlogin())
@@ -1968,9 +1967,6 @@ def btn2Action():
                 createbackup()
             shutil.rmtree(origin)
             os.mkdir(origin)
-            shutil.copyfile(f'{destiny}/brdfLUT.dds', origin + '/brdfLUT.dds')
-            shutil.copyfile(f'{destiny}/studs.dds', origin + '/studs.dds')
-            shutil.copyfile(f'{destiny}/wangIndex.dds', origin + '/wangIndex.dds')
             if varchk.get() == 10:
                 with open(fr'C:\Users\{user}\AppData\Local\Roblox\GlobalBasicSettings_13.xml', 'w+') as file:
                     file.write(
