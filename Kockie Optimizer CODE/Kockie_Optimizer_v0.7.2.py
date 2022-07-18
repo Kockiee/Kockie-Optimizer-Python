@@ -1955,18 +1955,6 @@ def btn2Action():
 
     def btnRobloxAction():
         try:
-            directory = str(dlg.askdirectory(title='Selecione a pasta de nome aleatório no diretório já aberto:', initialdir=(f'C:\\Users\\{user}\\AppData\\Local\\Roblox\\Versions')))
-            origin = str(f'{directory}/PlatformContent/pc/textures')
-            destiny = str(f'{directory}/PlatformContent/pc/TexturesBackup')
-            def createbackup():
-                shutil.copytree(origin, destiny)
-            if os.path.exists(destiny):
-                shutil.rmtree(destiny)
-                createbackup()
-            elif not os.path.exists(destiny):
-                createbackup()
-            shutil.rmtree(origin)
-            os.mkdir(origin)
             if varchk.get() == 10:
                 with open(fr'C:\Users\{user}\AppData\Local\Roblox\GlobalBasicSettings_13.xml', 'w+') as file:
                     file.write(
