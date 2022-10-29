@@ -52,7 +52,6 @@ winget uninstall Microsoft.ZuneMusic_8wekyb3d8bbwe -h
 winget uninstall Microsoft.ZuneVideo_8wekyb3d8bbwe -h
 winget uninstall microsoft.windowscommunicationsapps_8wekyb3d8bbwe -h
 winget uninstall Microsoft.Paint_8wekyb3d8bbwe -h
-winget uninstall Microsoft.549981C3F5F10_8wekyb3d8bbwe -h
 winget uninstall MicrosoftTeams_8wekyb3d8bbwe -h
 winget uninstall Microsoft.Windows.Photos_8wekyb3d8bbwe -h
 winget uninstall Microsoft.WindowsFeedbackHub_8wekyb3d8bbwe -h
