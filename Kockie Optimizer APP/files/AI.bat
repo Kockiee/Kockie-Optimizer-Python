@@ -22,7 +22,7 @@ winget install AMD.RyzenMaster -h
 
 
 ::Uteís
-winget install BraveSoftware.BraveBrowser -h
+winget install Google.Chrome -h
 winget install RARLab.WinRAR
 winget install CPUID.CPU-Z -h
 winget install Microsoft.Office -h
