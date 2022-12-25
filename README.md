@@ -9,4 +9,5 @@ emoji
 ctypes     
 
 Doações Por Pix: mgueli1208@gmail.com.      
+
 ![alt text](https://kockiee.github.io/img/KockieOptimizerPython1.png)       
