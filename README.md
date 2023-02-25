@@ -1,4 +1,4 @@
-# KockieOptimizer
+# Kockie Optimizer Python
 Aplicação Windows desenvolvida por mim para otimização tanto do sistema como de certos jogos.
 
 Frameworks utilizados:
